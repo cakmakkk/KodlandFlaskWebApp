@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kodland Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Kodland Python Quiz</h1>
+        {% if user %}
+        <div class="score-info">
+            Highest Score: {{ user.highest_score }} | Global Top Score: {{ top_score or 'N/A' }}
+        </div>
+        {% endif %}
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Developed by Yunus Emre Çakmak | Python Eğitmeni Adayı</p>
+    </footer>
+</body>
+</html>

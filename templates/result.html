@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Sonuçlar</h2>
+<p>Son Skorun: {{ user.last_score }}</p>
+<p>En Yüksek Skorun: {{ user.highest_score }}</p>
+<p>Genel En Yüksek Skor: {{ top_score }}</p>
+<a href="/quiz">Sınavı Tekrarla</a>
+{% endblock %}
